@@ -17,7 +17,7 @@
         <div class="mt-4">
             <button class="btn btn-primary btn-custom" onclick="navegarPara('usuarios')">Usuários</button>
             <button class="btn btn-primary btn-custom" onclick="navegarPara('estoque')">Estoque</button>
-            <button class="btn btn-primary btn-custom" onclick="navegarPara('funcao')">Funções</button>
+            
         </div>
     </div>
 
@@ -31,9 +31,7 @@
                 case 'estoque':
                     window.location.href = 'estoqueedit.php';
                     break;
-                case 'funcao':
-                    window.location.href = 'funcaoedit.php';
-                    break;
+            
             }
         }
     </script>

@@ -20,10 +20,11 @@
         <h1 class="text-center mb-4">Consulta de Estoque</h1>
 
         <!-- Botão Voltar para a Home -->
-        <div class="text-start mb-3">
-            <button class="back-button">Voltar para Home</button>
+        <div class="mb-3">
+            <a href="homeadmEV.php" class="btn btn-secondary">
+                ← Voltar
+            </a>
         </div>
-
         <!-- Formulário de Filtros -->
         <form id="filterForm" class="row g-3 mb-4">
             <div class="col-md-4">
@@ -48,9 +49,9 @@
             </div>
             <!-- Botão para exportar para PDF -->
             <div class="text-end mb-3">
-                <a href="../back/scripts/gerarRelatorioDiario.php"></a>
-                <button type="button" id="exportarPDF" class="btn btn-danger">Gerar Relatório</button>
-            </div>
+    <button type="button" id="exportarPDF" class="btn btn-danger">Gerar Relatório</button>
+</div>
+
         </form>
 
         <!-- Tabela de Resultados -->
@@ -83,9 +84,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/consulta-deposito.js"></script>
     <script>
-        let homeUrl = '<?php echo $_SESSION['homeUrl'] ?? ""; ?>';
-    </script>
-    <script src="../assets/js/voltar_home.js"></script>
+    document.getElementById('exportarPDF').addEventListener('click', function () {
+        gerarRelatorio();
+    });
+
+    function gerarRelatorio() {
+        // Criar um link invisível para iniciar o download automaticamente
+        const link = document.createElement('a');
+        link.href = '../back/scripts/gerarrelatoriopdf.php'; // Caminho para o seu script PHP que gera o PDF
+        link.download = 'relatorio_estoque.pdf'; // Nome do arquivo para download
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click(); // Simular o clique para baixar o arquivo
+        document.body.removeChild(link);
+    }
+</script>
+
+  
 </body>
 
 </html>

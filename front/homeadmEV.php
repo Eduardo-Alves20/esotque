@@ -60,7 +60,7 @@ require '../back/auth.php'; // Caminho para o arquivo auth.php
                 <h1 class="display-4">Bem-vindo ao Sistema de Estoque</h1>
                 <p class="lead">Gerencie facilmente o seu estoque, cadastre materiais e acompanhe relatórios de desempenho.</p>
                 <a href="cadastro_estoque.php" class="btn btn-primary btn-lg mt-3">Cadastrar Material</a>
-                <a href="relatorionf.php" class="btn btn-outline-secondary btn-lg mt-3">Visualizar Relatórios</a>
+                <a href="consulta_deposito.php" class="btn btn-outline-secondary btn-lg mt-3">Consultar Deposito</a>
             </div>
         </header>
 
