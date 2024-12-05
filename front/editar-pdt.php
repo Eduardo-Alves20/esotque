@@ -28,9 +28,7 @@ if ($id) {
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-<script>
-    let homeUrl = '<?php echo $_SESSION['homeUrl'] ?? ""; ?>';
-</script>
+
 
 <head>
     <meta charset="UTF-8">
@@ -42,7 +40,11 @@ if ($id) {
 
 <body>
     <div class="container mt-5">
-    <button class="back-button">Voltar para Home</button>
+    <div class="mb-3">
+            <a href="consulta_deposito.php" class="btn btn-secondary">
+                ← Voltar
+            </a>
+        </div>
         <h1 class="text-center mb-4">Editar Produto</h1>
 
         <!-- Formulário de Edição -->
